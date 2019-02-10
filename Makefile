@@ -85,21 +85,5 @@ tigerbrew-core/.git/config: tigerbrew/.git/config core-env-filter.sh
 	cd tigerbrew-core && git filter-branch -f --tree-filter "git checkout 0f293a9 LICENSE.txt formula_renames.json" -- --ancestry-path 0f293a9b3d8904f50bc53fbc8154e224b8493bec..
 	# Add formula_renames.json from a9bfaf1 add formula_renames.json and tap_migrations.json
 	cd tigerbrew-core && git filter-branch -f --tree-filter "git checkout a9bfaf1 tap_migrations.json" -- --ancestry-path a9bfaf1504d66c6788daa3600befeb06f56289d4..
-	# Update formula_renames.json from 5199b51 mlton 20130715 (new formula)
-	cd tigerbrew-core && git filter-branch -f --tree-filter "git checkout 5199b51 tap_migrations.json" -- --ancestry-path 5199b5138fd0e1c23127be51f540221f67978831~1..
-	# Graft 26e0c51 update tap_migrations
-	# onto 0b7525c lbdb: add 0.41 bottle.
-	cd tigerbrew-core && git filter-branch -f --parent-filter 'gsed s/0b7525c43259b4c36f61741f8c94001d12825e6b/26e0c5121720940aabd693ce911eb1a34bc7ff5b/' -- --ancestry-path 0b7525c43259b4c36f61741f8c94001d12825e6b..
-	# Update tap_migrations.json from 26e0c51 update tap_migrations
-	cd tigerbrew-core && git filter-branch -f --tree-filter "git checkout 26e0c51 tap_migrations.json" -- --ancestry-path 26e0c5121720940aabd693ce911eb1a34bc7ff5b..
-	# Update formula_renames.json from 1413b79 libodbc++: boneyard
-	cd tigerbrew-core && git filter-branch -f --tree-filter "git checkout 1413b79 tap_migrations.json" -- --ancestry-path 1413b793cd536f12ce387c65e17c54d86f77855b~1..
-	# Remove 71e2276 Merge remote-tracking branch 'origin/master'
-	cd tigerbrew-core && git filter-branch -f --parent-filter 'gsed s/71e2276787d1254932271d807ff5de4cb6b64d77/ea76f6c57874182ebfe63103c2c7e5b23e038669/' -- --ancestry-path 71e2276787d1254932271d807ff5de4cb6b64d77~1..
-	# Graft 2323ae2 update tap_migrations
-	# onto ef98654 imapsync: update 1.678 bottle.
-	cd tigerbrew-core && git filter-branch -f --parent-filter 'gsed s/ef986543c2b5067a599a031edd432500ee6d23e2/2323ae27a16c511dc2d0b06d69602569a51f465e/' -- --ancestry-path ef986543c2b5067a599a031edd432500ee6d23e2..
-	# Update tap_migrations.json from 2323ae2 update tap_migrations
-	cd tigerbrew-core && git filter-branch -f --tree-filter "git checkout 2323ae2 tap_migrations.json" -- --ancestry-path 2323ae27a16c511dc2d0b06d69602569a51f465e..
-	# Add mising new-line at end of message to cd7b96e ponyc: Update ponyc upstream URLs
-	cd tigerbrew-core && git filter-branch -f --msg-filter 'gsed \$$a\\' -- --ancestry-path cd7b96e3896cab5ac9f74aaa577b80b77a7fbd41~1..
+	# Several formula_rename updates originally came here; skipping
+	# them because Tigerbrew is further behind in history.
