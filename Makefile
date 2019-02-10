@@ -79,7 +79,7 @@ tigerbrew-core/.git/config: tigerbrew/.git/config core-env-filter.sh
 	# Graft a9bfaf1 add formula_renames.json and tap_migrations.json
 	# and 0f293a9 add LICENSE.txt
 	# onto 47e3f93 libxslt: update 1.1.28_1 bottle.
-	cd tigerbrew-core && git filter-branch -f --parent-filter 'gsed s/47e3f93a2d465ee46c281b5150b7f975633089ac/0f293a9b3d8904f50bc53fbc8154e224b8493bec/' -- --ancestry-path 47e3f93a2d465ee46c281b5150b7f975633089ac..
+	cd tigerbrew-core && git filter-branch -f --parent-filter 'gsed s/89170095faff1dfde1edcbc4b96bec671d6f8b2d/0f293a9b3d8904f50bc53fbc8154e224b8493bec/' -- --ancestry-path 89170095faff1dfde1edcbc4b96bec671d6f8b2d..
 	# Add formula_renames.json from a9bfaf1 add formula_renames.json and tap_migrations.json
 	# Add LICENSE.txt from 0f293a9 add LICENSE.txt
 	cd tigerbrew-core && git filter-branch -f --tree-filter "git checkout 0f293a9 LICENSE.txt formula_renames.json" -- --ancestry-path 0f293a9b3d8904f50bc53fbc8154e224b8493bec..
